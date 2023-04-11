@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	result, err := FizzBuzz(1, 100, 2, 5, PositiveDirection)
+	result, err := FizzBuzz(-10, 10, 2, 5, PositiveDirection)
 	if err != nil {
 		log.Fatal(err)
 		return
@@ -53,9 +53,6 @@ func FizzBuzz(from, to, fizz, buzz int, direction DirectionType) ([]string, erro
 }
 
 func validateValues(from, to, fizz, buzz int, direction DirectionType) error {
-	if from <= 0 || to <= 0 || fizz <= 0 || buzz <= 0 {
-		return AllValuesNeedToBeGreaterThanZeroError
-	}
 	if direction == PositiveDirection {
 		if from > to {
 			return FromGreaterThanToError

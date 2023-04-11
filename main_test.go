@@ -68,18 +68,19 @@ func TestValueValidation(t *testing.T) {
 }
 
 func TestFizzBuzz(t *testing.T) {
-	res, err := FizzBuzz(1, 10, 2, 5, PositiveDirection)
+	res, err := FizzBuzz(-10, 10, 2, 5, PositiveDirection)
 	assert.NoError(t, err)
-	assert.Equal(t, "1", res[0])
-	assert.Equal(t, "Fizz", res[1])
-	assert.Equal(t, "Buzz", res[4])
-	assert.Equal(t, "Fizz", res[5])
-	assert.Equal(t, "9", res[8])
-	assert.Equal(t, "FizzBuzz", res[9])
+	assert.Equal(t, "FizzBuzz", res[0])
+	assert.Equal(t, "-9", res[1])
+	assert.Equal(t, "Fizz", res[4])
+	assert.Equal(t, "Buzz", res[5])
+	assert.Equal(t, "FizzBuzz", res[10])
+	assert.Equal(t, "1", res[11])
+	assert.Equal(t, "FizzBuzz", res[20])
 	//you can see the result after uncomment below line
 	//fmt.Println(res)
 
-	res, err = FizzBuzz(10, 1, 2, 5, NegativeDirection)
+	res, err = FizzBuzz(10, -10, 2, 5, NegativeDirection)
 	assert.NoError(t, err)
 	assert.Equal(t, "FizzBuzz", res[0])
 	assert.Equal(t, "9", res[1])
@@ -87,6 +88,10 @@ func TestFizzBuzz(t *testing.T) {
 	assert.Equal(t, "Buzz", res[5])
 	assert.Equal(t, "Fizz", res[6])
 	assert.Equal(t, "1", res[9])
+	assert.Equal(t, "FizzBuzz", res[10])
+	assert.Equal(t, "Fizz", res[14])
+	assert.Equal(t, "Buzz", res[15])
+	assert.Equal(t, "FizzBuzz", res[20])
 	//you can see the result after uncomment below line
 	//fmt.Println(res)
 
