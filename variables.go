@@ -17,5 +17,4 @@ var (
 	FizzOrBuzzGreaterOrEqualThanFromError = errors.New("fizz/buzz value can't be greater than or equal to 'from' for negative direction")
 	FizzOrBuzzLessOrEqualThanToError      = errors.New("fizz/buzz value can't be less than or equal to 'to' for negative direction")
 	FizzEqualToBuzzError                  = errors.New("'fizz' can't be equal to 'buzz'")
-	AllValuesNeedToBeGreaterThanZeroError = errors.New("all values need to ge greater than zero")
 )

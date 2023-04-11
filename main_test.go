@@ -55,16 +55,6 @@ func TestValueValidation(t *testing.T) {
 	assert.ErrorIs(t, err19, FizzEqualToBuzzError)
 	_, err20 := FizzBuzz(10, 1, 5, 5, NegativeDirection)
 	assert.ErrorIs(t, err20, FizzEqualToBuzzError)
-
-	//positive values
-	_, err21 := FizzBuzz(-1, 1, 2, 3, PositiveDirection)
-	assert.ErrorIs(t, err21, AllValuesNeedToBeGreaterThanZeroError)
-	_, err22 := FizzBuzz(1, -1, 2, 3, PositiveDirection)
-	assert.ErrorIs(t, err22, AllValuesNeedToBeGreaterThanZeroError)
-	_, err23 := FizzBuzz(1, 1, -1, 3, PositiveDirection)
-	assert.ErrorIs(t, err23, AllValuesNeedToBeGreaterThanZeroError)
-	_, err24 := FizzBuzz(1, 1, 2, -1, PositiveDirection)
-	assert.ErrorIs(t, err24, AllValuesNeedToBeGreaterThanZeroError)
 }
 
 func TestFizzBuzz(t *testing.T) {
