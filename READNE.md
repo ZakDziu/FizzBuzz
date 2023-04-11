@@ -1,0 +1,1 @@
+# This is solution in Go for the FizzBuzz problem
